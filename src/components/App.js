@@ -16,7 +16,7 @@ const AuthenticatedRedirect = ({ children }) => {
 function App() {
   return (
     <AuthProvider>
-      <Router basename='\projectreact_1'>
+      <Router basename="/projectreact_1">
         <Routes>
           <Route 
             path="/login" 
