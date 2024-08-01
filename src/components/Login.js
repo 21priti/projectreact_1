@@ -13,11 +13,12 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email === 'pritipralipta@gmail.com' && password === 'password') {
+    // Assuming any non-empty email and password is valid
+    if (email && password) {
       login();
       navigate('/');
     } else {
-      alert('Invalid credentials');
+      alert('Please enter both email and password');
     }
   };
 
@@ -32,42 +33,37 @@ const Login = () => {
         <div className='imgdiv'>
           <img src={home1} alt='hh'></img>
         </div>
-       <div className="container">
-            <h1>Login</h1>
-            <p>Welcome back !!</p>
-            <form onSubmit={handleSubmit}>
-              <label htmlFor="email">Email</label>
+        <div className="container">
+          <h1>Login</h1>
+          <p>Welcome back !!</p>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              required 
+            />
+            <label htmlFor="password">Password</label>
+            <div className="forget-password">
               <input 
-                type="email" 
-                id="email" 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
+                type="password" 
+                id="password" 
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)} 
                 required 
               />
-              <label htmlFor="password">Password</label>
-              <div className="forget-password">
-                <input 
-                  type="password" 
-                  id="password" 
-                  value={password} 
-                  onChange={(e) => setPassword(e.target.value)} 
-                  required 
-                />
-               
-                <a href="#">Forget Password?</a>
-              </div>
-              <button type="submit">Login</button>
-         
+              <a href="#">Forget Password?</a>
+            </div>
+            <button type="submit">Login</button>
             <div className="signup">
               <p>Don’t have an account yet? <a href="#">Sign up for free</a></p>
-             
             </div>
-            </form>
-          </div>
-          
+          </form>
         </div>
       </div>
-    
+    </div>
   );
 };
 
