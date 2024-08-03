@@ -3,22 +3,27 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import Nav from '../components/Nav';
 import home1 from '../resouse/hero image 2.png';
+import usersData from '../data/users.json'; // Import the JSON file
 import '../css/login.css';
 
 const Login = () => {
   const navigate = useNavigate();
-  const { login, isAuthenticated } = useAuth();
+  const { login, setRole, isAuthenticated } = useAuth(); // Assuming setRole function is in useAuth
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Assuming any non-empty email and password is valid
-    if (email && password) {
+
+    // Check if the email and password match any user in the JSON file
+    const user = usersData.find(user => user.email === email && user.password === password);
+
+    if (user) {
       login();
+      setRole(user.role); // Set the user's role
       navigate('/');
     } else {
-      alert('Please enter both email and password');
+      alert('Invalid email or password');
     }
   };
 
