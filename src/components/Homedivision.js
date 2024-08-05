@@ -5,8 +5,7 @@ import Product from '../pages/Product';
 import userimg from '../resouse/user1.jpg';
 import home1 from'../resouse/Hero image 1.png';
 import home2 from'../resouse/hero image 2.png';
-import LogoutButton from './LogoutButton';
-
+import LogoutButton from './LogoutButton';  
 
 function Homedivision() {
   const navigate = useNavigate();

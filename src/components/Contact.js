@@ -10,7 +10,7 @@ function Contact() {
     display: 'flex',
     flexDirection: 'column',
     marginLeft:'20px',
-    justifyContent: 'space-between', /* Ensure form elements are evenly spaced */
+    justifyContent: 'space-between',
   };
 
   

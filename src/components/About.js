@@ -10,13 +10,8 @@ function About(){
     const addr="Patia,Bhubaneswar";
     const zip="751024";
     const state="Odisha";
-    const states={
-      float:'left'
-    };
-    const zips={
-      float:'left',
-      marginleft:'90px'
-    };
+  
+   
     return(
        <div className="mainaboutdiv">
         <Nav />
@@ -53,13 +48,13 @@ function About(){
                   type="textfield"
                   value={addr} readOnly
                 />
-                <div className={states}>
+                <div className="state">
                   <label htmlFor="state">State</label>
               <input 
                   type="textfield"
                   value={state} readOnly
                 /></div>
-                <div className={zips}>
+                <div className="zip">
                   <label htmlFor="zip">Zip Code</label>
               <input 
                   type="textfield"

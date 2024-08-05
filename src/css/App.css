@@ -8,7 +8,7 @@ body{
 .homedivision{
     background-color: rgb(207, 184, 187);
     border: 1px solid black;
-    height: 850px;
+    height: 860px;
     margin: 0px 30px;
 }
 .homepagecontent{
@@ -44,5 +44,6 @@ body{
 .homeimg{
     width: 400px;
     height: 550px;
+    border-radius: 0;
 }
 
