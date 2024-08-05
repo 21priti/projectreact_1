@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from './AuthContext';
-import ProtectedRoute from './ProtectedRoute';
-import Heading from '../pages/Heading';
-import Descriptionpage from '../pages/Descriptionpage';
-import LoginPage from '../pages/LoginPage';
-import AboutPage from '../pages/AboutPage';
-import ContactUs from '../pages/ContactUs';
+import { AuthProvider, useAuth } from './components/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
+import Heading from './pages/Heading';
+import Descriptionpage from './pages/Descriptionpage';
+import LoginPage from './pages/LoginPage';
+import AboutPage from './pages/AboutPage';
+import ContactUs from './pages/ContactUs';
 
 const AuthenticatedRedirect = ({ children }) => {
   const { isAuthenticated } = useAuth();

@@ -3,13 +3,7 @@ import { Link } from "react-router-dom";
 import '../css/contact.css';
 
 function Contact() {
-  const textf = {
-    padding: '10px',
-    marginBottom: '20px',
-    border: '1px solid #c8a092',
-    borderRadius: '4px',
-    with:'400px',
-  };
+ 
 
   const formStyle = {
     flex: '1',
@@ -19,23 +13,9 @@ function Contact() {
     justifyContent: 'space-between', /* Ensure form elements are evenly spaced */
   };
 
-  const texta = {
-    padding: '10px',
-    marginBottom: '20px',
-    border: '1px solid #c8a092',
-    borderRadius: '4px',
-    resize: 'none',
-    
-  };
+  
 
-  const but = {
-    padding: '10px',
-    backgroundColor: '#c8a092',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    color: 'white',
-  };
+  
   const linkStyle = {
     textDecoration: 'none',
     color: 'inherit'
@@ -58,10 +38,10 @@ function Contact() {
           </div>
           <div style={formStyle}>
             <form className="cform">
-              <input type="text" placeholder="Name" style={textf} />
-              <input type="email" placeholder="Email" style={textf} />
-              <textarea rows="5" placeholder="Message" style={texta} />
-              <button type="submit" style={but}>Submit</button>
+              <input type="text" placeholder="Name" className="textf" />
+              <input type="email" placeholder="Email" className="textf"/>
+              <textarea rows="5" placeholder="Message" className="textf"/>
+              <button type="submit" className="but">Submit</button>
             </form>
           </div>
         </div>

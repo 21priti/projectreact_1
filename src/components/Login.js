@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import Nav from '../components/Nav';
-import home1 from '../resouse/hero image 2.png';
+import home1 from '../resouse/Login in page image.png';
 import usersData from '../data/users.json'; // Import the JSON file
 import '../css/login.css';
 
@@ -36,7 +36,7 @@ const Login = () => {
       <Nav />
       <div className='logindiv'>
         <div className='imgdiv'>
-          <img src={home1} alt='hh'></img>
+          <img src={home1} alt=''></img>
         </div>
         <div className="container">
           <h1>Login</h1>

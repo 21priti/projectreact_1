@@ -7,13 +7,7 @@ function Descriptionpage() {
   return (
    
     <div>
-       <div>
-      <h1 className='dtopheading'>Description Page</h1>
-    
-      
-    </div>
-    
-      <Descriptionpart />
+   <Descriptionpart />
     </div>
   
   );
